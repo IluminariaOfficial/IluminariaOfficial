@@ -659,7 +659,7 @@ h1, h2, h3, h4, h5, h6 {
   .nav-links {
     display: flex;
     flex-direction: column;
-    gap: 2px; /* minimal vertical spacing */
+    gap: 1px; /* minimal vertical spacing */
     position: static;
     background: rgba(0, 0, 20, 0.85);
     padding: 4px;
