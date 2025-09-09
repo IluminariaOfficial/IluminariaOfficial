@@ -655,46 +655,52 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ================= Mobile Fixes ================= */
 @media (max-width: 768px) {
-  /* Navbar */
+  /* Navbar in 2 tight columns */
   .nav-links {
-    flex-direction: column;
-    gap: 12px;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: rgba(0, 0, 20, 0.95);
-    padding: 15px;
-    border-radius: 10px;
-    display: none; /* toggle with JS if you want a burger menu */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* two columns */
+    gap: 2px; /* minimal vertical spacing */
+    position: static;
+    background: rgba(0, 0, 20, 0.85);
+    padding: 4px;
+    border-radius: 6px;
+    width: 100%;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
   }
 
   .nav-links li a {
     display: block;
     width: 100%;
-    text-align: center;
+    padding: 4px 6px; /* compressed padding */
+    font-size: 0.8rem; /* smaller font */
+    line-height: 1;   /* very tight line height */
   }
 
   /* Hero section */
   .hero-container {
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     width: 95%;
   }
 
   .hero-container .hero-box {
-    padding: 25px 20px;
+    padding: 14px 10px;
   }
 
   /* Reviewer grid collapses into 1 or 2 columns */
   .reviewer-grid {
-    grid-template-columns: 1fr; /* single column for small screens */
-    gap: 20px;
-    padding: 0 20px 40px;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 8px 20px;
   }
 
   @media (min-width: 480px) and (max-width: 768px) {
     .reviewer-grid {
-      grid-template-columns: repeat(2, 1fr); /* two columns on mid-sized devices */
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
@@ -702,41 +708,42 @@ h1, h2, h3, h4, h5, h6 {
   .announcements-updates,
   .announcements-page,
   .teasers-page {
-    padding: 10px;
+    padding: 6px;
   }
 
   .announcement,
   .announcement.match-changelog,
   .teasers.match-changelog {
-    padding: 20px;
-    font-size: 1rem;
+    padding: 12px;
+    font-size: 0.9rem;
   }
 
   /* Contact form */
   .contact-box {
     width: 100%;
-    padding: 0 10px;
+    padding: 0 4px;
   }
 
   .contact-form input,
   .contact-form textarea {
-    font-size: 0.95rem;
-    padding: 10px;
+    font-size: 0.85rem;
+    padding: 6px;
   }
 
   /* Buttons scale down */
   .btn {
-    padding: 10px 18px;
-    font-size: 0.95rem;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 16px;
   }
 
   /* Section titles scale */
   .section-title,
   .tagline-box h2 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   .tagline-box p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
