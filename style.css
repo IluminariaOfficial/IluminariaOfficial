@@ -655,10 +655,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ================= Mobile Fixes ================= */
 @media (max-width: 768px) {
-  /* Navbar in 2 tight columns */
+  /* Navbar in 1 tight column */
   .nav-links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* two columns */
+    display: flex;
+    flex-direction: column;
     gap: 2px; /* minimal vertical spacing */
     position: static;
     background: rgba(0, 0, 20, 0.85);
@@ -675,9 +675,9 @@ h1, h2, h3, h4, h5, h6 {
   .nav-links li a {
     display: block;
     width: 100%;
-    padding: 4px 6px; /* compressed padding */
+    padding: 3px 5px; /* very tight padding */
     font-size: 0.8rem; /* smaller font */
-    line-height: 1;   /* very tight line height */
+    line-height: 1;   /* compressed line height */
   }
 
   /* Hero section */
